@@ -6,7 +6,7 @@ body {
 }
 
 .main {
-  height: calc(100% - 92px);
+  height: calc(100% - 120px);
 }
 
 .ui.secondary.inverted.menu {
@@ -70,4 +70,8 @@ body {
 
 .full {
   height: 100%;
+}
+
+.ui.grid {
+  margin: 0;
 }
