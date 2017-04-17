@@ -2,6 +2,11 @@
 
 body {
   background-color: #333;
+  min-height: 100vh;
+}
+
+.main {
+  height: calc(100% - 92px);
 }
 
 .ui.secondary.inverted.menu {
@@ -50,7 +55,6 @@ body {
 .bottom .menu-item a {
   border-bottom: none !important;
   border-top: 3px solid #fff;
-  transition: all .15s ease;
   padding-top: 14px;
 }
 
@@ -64,6 +68,6 @@ body {
   max-width: 450px;
 }
 
-.main {
-  padding-top: 32px;
+.full {
+  height: 100%;
 }
