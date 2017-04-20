@@ -6,12 +6,31 @@ body {
 }
 
 .main {
-  height: calc(100% - 120px);
+  position: relative;
+  height: calc(100% - 92px);
+  margin-top: 14px;
+  margin-bottom: 14px;
 }
+
+.competition {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.full {
+  height: 100%;
+}
+
+.ui.grid {
+  margin: 0;
+}
+
+/* Menu */
 
 .ui.secondary.inverted.menu {
   background-color: #000 !important;
   border: none;
+  margin: 0;
 }
 
 .menu-item {
@@ -64,14 +83,72 @@ body {
   padding-top: 10px;
 }
 
+/* Login */
+
 .login-form {
   max-width: 450px;
 }
 
-.full {
+/* Contest */
+
+.competition-list-header {
+  width: 100%;
+  background: #222;
+  padding: 12px;
+  color: white;
+}
+
+.competition-list-content{
+  width: 100%;
+}
+
+.ui.list {
+  padding-top: 12px !important;
+}
+
+.ui.list i.icon {
+  padding-left: 12px !important;
+}
+
+.ui.list>.item {
+  padding: .4em 0;
+}
+
+.ui.list .list {
+  padding: .5em 0 0 0;
+}
+
+.ui.list .list>.item,
+.ui.list .list>.item:first-child,
+.ui.list .list>.item:last-child {
+  padding: .4em 1em;
+}
+
+.ui.list .list>.item.accepted {
+  background-color: rgba(32, 255, 32, .4);
+}
+
+.ui.list .list>.item:not(.accepted):focus,
+.ui.list .list>.item:not(.accepted):hover {
+  background-color: rgba(255,255,255,0.2);
+}
+
+a.problem > i.icon + i.icon,
+a.problem.accepted > i.icon {
+  display: none !important;
+}
+
+a.problem.accepted > i.icon + i.icon {
+  display: table-cell !important;
+}
+
+.competition-list {
+  position: relative;
+  float: left;
+  width: 20%;
+  min-width: 200px;
+  overflow-y: auto;
+  background: #aaa;
   height: 100%;
 }
 
-.ui.grid {
-  margin: 0;
-}
