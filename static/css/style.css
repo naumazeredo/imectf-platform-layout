@@ -100,13 +100,14 @@ body {
   overflow-y: auto;
   background: #aaa;
   height: 100%;
+  border-right: 2px #111 solid;
 }
 
 .competition-list-header {
   width: 100%;
   background: #777;
   padding: 12px;
-  border-bottom: solid 2px #333;
+  border-bottom: solid 2px #111;
   font-weight: bold;
 }
 
@@ -117,14 +118,12 @@ body {
 }
 
 @media (max-width: 723px) {
-  .competition {
-    /*display: inline;*/
-  }
-
   .competition-list {
     display: table;
     width: 100%;
     height: auto;
+    border-right: none;
+    border-bottom: 2px #111 solid;
   }
 
   .competition-wrapper {
