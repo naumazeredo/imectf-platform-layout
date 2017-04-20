@@ -12,11 +12,6 @@ body {
   margin-bottom: 14px;
 }
 
-.competition {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
 .full {
   height: 100%;
 }
@@ -91,17 +86,85 @@ body {
 
 /* Contest */
 
+.competition {
+  display: table;
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.competition-list {
+  display: table-cell;
+  width: 20%;
+  min-width: 200px;
+  overflow-y: auto;
+  background: #aaa;
+  height: 100%;
+}
+
 .competition-list-header {
   width: 100%;
-  background: #222;
+  background: #777;
   padding: 12px;
-  color: white;
+  border-bottom: solid 2px #333;
+  font-weight: bold;
 }
 
-.competition-list-content{
-  width: 100%;
+.competition-wrapper {
+  display: table-cell;
+  width: 80%;
+  height: 100%;
 }
 
+@media (max-width: 723px) {
+  .competition {
+    /*display: inline;*/
+  }
+
+  .competition-list {
+    display: table;
+    width: 100%;
+    height: auto;
+  }
+
+  .competition-wrapper {
+    display: table;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.competition-content {
+  position: relative;
+  float: left;
+  display: table-cell;
+  width: 50%;
+  height: 100%;
+}
+
+.competition-shell {
+  position: relative;
+  float: left;
+  display: table-cell;
+  width: 50%;
+  height: 100%;
+  background: #222;
+}
+
+/* Small and Medium monitor: content atop shell */
+@media (max-width: 1127px) {
+  .competition-content {
+    height: 50%;
+    width: 100%;
+  }
+
+  .competition-shell {
+    height: 50%;
+    width: 100%;
+  }
+}
+
+/* problem explorer */
 .ui.list {
   padding-top: 12px !important;
 }
@@ -133,6 +196,9 @@ body {
   background-color: rgba(255,255,255,0.2);
 }
 
+/* problem explorer icon changer */
+/* file icon if problem not solved */
+/* flag icon if problem solved */
 a.problem > i.icon + i.icon,
 a.problem.accepted > i.icon {
   display: none !important;
@@ -141,14 +207,3 @@ a.problem.accepted > i.icon {
 a.problem.accepted > i.icon + i.icon {
   display: table-cell !important;
 }
-
-.competition-list {
-  position: relative;
-  float: left;
-  width: 20%;
-  min-width: 200px;
-  overflow-y: auto;
-  background: #aaa;
-  height: 100%;
-}
-
