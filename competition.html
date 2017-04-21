@@ -29,19 +29,23 @@
           <span>Competition Explorer</span>
         </div>
         <div class="row">
-          <div class="ui list">
 
-            <div class="item">
+          <div class="ui list accordion">
+
+            <div class="item ui">
               <div class="right floated content score">
                 <div class="header">3265 pts / 131th</div>
               </div>
-              <i class="folder open icon"></i>
-              <div class="content">
-                <div class="header">Competition</div>
-              </div>
+
+              <a class="accordion-title active">
+                <i class="folder open icon"></i>
+                <div class="content">
+                  <div class="header">Competition</div>
+                </div>
+              </a>
 
 
-              <div class="list">
+              <div class="list accordion-content active">
 
                 <a class="item problem">
                   <div class="right floated content team-name">
@@ -67,12 +71,14 @@
             </div>
 
             <div class="item">
-              <i class="folder open icon"></i>
-              <div class="content">
-                <div class="header">Cryptography</div>
-              </div>
+              <a class="accordion-title active">
+                <i class="folder open icon"></i>
+                <div class="content">
+                  <div class="header">Cryptography</div>
+                </div>
+              </a>
 
-              <div class="list">
+              <div class="list accordion-content active">
 
                 <a class="item problem">
                   <div class="right floated content">
@@ -117,12 +123,14 @@
             </div>
 
             <div class="item">
-              <i class="folder open icon"></i>
-              <div class="content">
-                <div class="header">Binary Exploitation</div>
-              </div>
+              <a class="accordion-title active">
+                <i class="folder open icon"></i>
+                <div class="content">
+                  <div class="header">Binary Exploitation</div>
+                </div>
+              </a>
 
-              <div class="list">
+              <div class="list accordion-content active">
 
                 <a class="item problem">
                   <div class="right floated content">
@@ -202,5 +210,17 @@ In pretium nunc ut sapien aliquam consectetur. Curabitur a ipsum non tortor tinc
         </div>
       </div>
     </div>
+
+    <script>
+      $(".ui.accordion")
+        .accordion({
+          exclusive: false,
+          selector: {
+            trigger: '.accordion-title',
+            title: '.accordion-title',
+            content: '.accordion-content'
+          }
+        });
+    </script>
   </body>
 </html>

@@ -223,7 +223,7 @@ body {
   background-color: rgba(255,255,255,0.2);
 }
 
-.problem.icon {
+.problem .icon {
   width: 32px;
 }
 
@@ -265,6 +265,40 @@ a.problem.accepted > i.flag.icon {
 
 .score {
   padding-right: 12px;
+}
+
+/* accordion */
+.accordion-title {
+  -webkit-user-select: none; /* Chrome/Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+  -o-user-select: none;
+  user-select: none;
+}
+
+.accordion-title .icon {
+  display: table-cell;
+  margin: 0;
+  padding-top: .07142857em;
+  padding-right: .28571429em;
+  vertical-align: top;
+  -webkit-transition: color .1s ease;
+  transition: color .1s ease;
+  color: black;
+}
+
+.accordion-title .content {
+  display: table-cell;
+  padding: 0 0 0 .5em;
+  vertical-align: top;
+}
+
+.accordion-content {
+  display: none;
+}
+
+.accordion-content.active {
+  display: block;
 }
 
 /* Leaderboard */
