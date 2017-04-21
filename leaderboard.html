@@ -160,31 +160,89 @@
         <div class="competition-content">
           <div class="ui basic segment problem">
             <div class="problem-header">
-              <h2 class="ui center aligned header">Problem</h2>
+              <h2 class="ui center aligned header">Leaderboard</h2>
             </div>
+
             <div class="problem-desc">
-            <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non euismod neque. Aliquam congue tristique ipsum at laoreet. Morbi vel egestas ante. Nulla interdum vel nibh quis sollicitudin. Cras cursus lacus sit amet est cursus efficitur. Pellentesque et augue cursus, faucibus sem non, dictum arcu. Nulla efficitur est nec diam ultricies convallis. Nam bibendum nunc eu facilisis commodo. Suspendisse hendrerit diam ac mollis porta. Etiam tristique elit quam, vitae placerat tellus condimentum a.
-            </p>
-            <p>
-In pretium nunc ut sapien aliquam consectetur. Curabitur a ipsum non tortor tincidunt cursus. Quisque et iaculis libero, in laoreet neque. Quisque accumsan purus at est dictum, id ultrices massa interdum. Curabitur vitae arcu nec lectus malesuada ullamcorper quis non enim. Fusce porta ipsum non iaculis consequat. Fusce sit amet augue eleifend, ullamcorper est nec, placerat neque. Ut erat augue, posuere at orci ut, accumsan efficitur nunc. Praesent et nisl magna. Praesent aliquet nisi ex, a aliquet lorem tincidunt sit amet. Etiam at tortor ut massa fringilla dignissim quis non ante. Praesent tincidunt vulputate commodo. Integer consequat augue sed faucibus fermentum.
-            </p>
-            <p>
-In pretium nunc ut sapien aliquam consectetur. Curabitur a ipsum non tortor tincidunt cursus. Quisque et iaculis libero, in laoreet neque. Quisque accumsan purus at est dictum, id ultrices massa interdum. Curabitur vitae arcu nec lectus malesuada ullamcorper quis non enim. Fusce porta ipsum non iaculis consequat. Fusce sit amet augue eleifend, ullamcorper est nec, placerat neque. Ut erat augue, posuere at orci ut, accumsan efficitur nunc. Praesent et nisl magna. Praesent aliquet nisi ex, a aliquet lorem tincidunt sit amet. Etiam at tortor ut massa fringilla dignissim quis non ante. Praesent tincidunt vulputate commodo. Integer consequat augue sed faucibus fermentum.
-            </p>
+              <table class="ui very basic selectable unstackable fixed table leaderboard">
+                <thead>
+                  <tr>
+                    <th class="three wide">Rank</th>
+                    <th class="ten wide">Team</th>
+                    <th class="three wide right aligned">Score</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td class="ten wide">AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</td>
+                    <td class="right aligned">9001</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Narcélio</td>
+                    <td class="right aligned">9001</td>
+                  </tr>
+                  <tr class="warning">
+                    <td>3</td>
+                    <td>Matissek</td>
+                    <td class="right aligned">9001</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>Avelino</td>
+                    <td class="right aligned">9001</td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>Óberto</td>
+                    <td class="right aligned">9001</td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td>Pedrinho</td>
+                    <td class="right aligned">9001</td>
+                  </tr>
+                  <tr>
+                    <td>7</td>
+                    <td>Pedrinho</td>
+                    <td class="right aligned">9001</td>
+                  </tr>
+                  <tr>
+                    <td>8</td>
+                    <td>Pedrinho</td>
+                    <td class="right aligned">9001</td>
+                  </tr>
+                  <tr>
+                    <td>9</td>
+                    <td>Pedrinho</td>
+                    <td class="right aligned">9001</td>
+                  </tr>
+                  <tr>
+                    <td>10</td>
+                    <td>Pedrinho</td>
+                    <td class="right aligned">9001</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
+
           </div>
-          <div class="input-flag">
-            <div class="ui horizontal divider">
-              Submit
-            </div>
-            <div class="ui fluid action left corner labeled input">
-              <input type="text" placeholder="Insert flag">
-              <button class="ui icon basic button">
-                <i class="send icon"></i>
-              </button>
-              <div class="ui left corner label">
-                <i class="flag icon"></i>
+
+          <div class="ui centered grid leaderboard-pagination">
+            <div class="center aligned column">
+              <div class="ui center aligned borderless pagination menu">
+                <a class="item"><i class="chevron left icon"></i></a>
+                <a class="item">1</a>
+                <div class="disabled item">...</div>
+                <a class="item">10</a>
+                <a class="item">11</a>
+                <a class="active item">12</a>
+                <a class="item">13</a>
+                <a class="item">14</a>
+                <div class="disabled item">...</div>
+                <a class="item">20</a>
+                <a class="item"><i class="chevron right icon"></i></a>
               </div>
             </div>
           </div>

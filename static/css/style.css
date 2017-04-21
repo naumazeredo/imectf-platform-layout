@@ -97,7 +97,7 @@ body {
 .competition-list {
   display: table-cell;
   width: 20%;
-  min-width: 200px;
+  min-width: 250px;
   overflow-y: auto;
   background: #aaa;
   height: 100%;
@@ -152,7 +152,7 @@ body {
   margin-bottom: 80px;
 }
 
-.competition-content .problem-header{
+.competition-content .problem-header {
   margin-bottom: 1em;
 }
 
@@ -261,4 +261,24 @@ a.problem.accepted > i.file.icon {
 
 a.problem.accepted > i.flag.icon {
   display: table-cell !important;
+}
+
+.score {
+  padding-right: 12px;
+}
+
+/* Leaderboard */
+.leaderboard-pagination {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.leaderboard th:first-child,
+.leaderboard th:last-child,
+.leaderboard td:first-child,
+.leaderboard td:last-child {
+  padding-left: .78571429em !important;
+  padding-right: .78571429em !important;
 }
