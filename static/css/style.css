@@ -1,6 +1,7 @@
 /* IMECTF Platform style */
 
 body {
+  position: relative;
   background-color: #333;
   min-height: 100vh;
 }
@@ -9,7 +10,7 @@ body {
   position: relative;
   height: calc(100% - 92px);
   margin-top: 14px;
-  margin-bottom: 14px;
+  margin-bottom: 60px;
 }
 
 .full {
@@ -90,7 +91,7 @@ body {
   display: table;
   width: 100%;
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 46px;
 }
 
 .competition-list {
@@ -101,6 +102,7 @@ body {
   background: #aaa;
   height: 100%;
   border-right: 2px #111 solid;
+  vertical-align: top;
 }
 
 .competition-list-header {
@@ -115,6 +117,8 @@ body {
   display: table-cell;
   width: 80%;
   height: 100%;
+  overflow: hidden;
+  vertical-align: top;
 }
 
 @media (max-width: 723px) {
@@ -139,6 +143,30 @@ body {
   display: table-cell;
   width: 50%;
   height: 100%;
+  margin: 0 !important;
+  background: #ddd;
+}
+
+.competition-content .problem {
+  height: calc(100% - 80px);
+  margin-bottom: 80px;
+}
+
+.competition-content .problem-header{
+  margin-bottom: 1em;
+}
+
+.competition-content .problem-desc {
+  height: calc(100% - 2.2em);
+  overflow-y: auto;
+}
+
+.competition-content .input-flag {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 12px;
 }
 
 .competition-shell {
