@@ -226,11 +226,11 @@ body {
 /* problem explorer icon changer */
 /* file icon if problem not solved */
 /* flag icon if problem solved */
-a.problem > i.icon + i.icon,
-a.problem.accepted > i.icon {
+a.problem > i.flag.icon,
+a.problem.accepted > i.file.icon {
   display: none !important;
 }
 
-a.problem.accepted > i.icon + i.icon {
+a.problem.accepted > i.flag.icon {
   display: table-cell !important;
 }
