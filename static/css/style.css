@@ -60,6 +60,11 @@ body {
   padding-top: 16px;
 }
 
+.menu-item.text {
+  color: grey !important;
+  padding: 14px 12px !important;
+}
+
 .bottom {
   position: fixed;
   left: 0;
@@ -268,12 +273,16 @@ a.problem.accepted > i.flag.icon {
 }
 
 /* accordion */
-.accordion-title {
+.competition-list {
   -webkit-user-select: none; /* Chrome/Safari */
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* IE10+ */
   -o-user-select: none;
   user-select: none;
+}
+
+.competition-list-header {
+  cursor: default;
 }
 
 .accordion-title .icon {
