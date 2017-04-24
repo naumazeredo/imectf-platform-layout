@@ -154,7 +154,7 @@ body {
 }
 
 .competition-content .problem {
-  height: calc(100% - 80px);
+  height: calc(100% - 125px);
   margin-bottom: 80px;
 }
 
@@ -163,6 +163,7 @@ body {
 }
 
 .competition-content .problem-desc {
+  margin-bottom: 35px;
   height: calc(100% - 2.2em);
   overflow-y: auto;
 }
