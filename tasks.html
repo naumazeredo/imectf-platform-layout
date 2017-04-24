@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>IMECTF</title>
+    <link rel="stylesheet" type="text/css" href="static/css/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+    <script src="static/js/jquery-3.2.1.min.js"></script>
+    <script src="static/js/semantic.min.js"></script>
+    <script src="static/js/tablesort.js"></script>
+  </head>
+  <body>
+    <!-- Navigation Menu -->
+    <div class="ui inverted top secondary pointing menu">
+      <div class="ui container">
+        <div class="header item"><a href="#">IMECTF</a></div>
+        <div class="item menu-item active"><a href="#">Competições</a></div>
+        <div class="item menu-item"><a href="#">Item 3</a></div>
+        <div class="right menu">
+          <div class="item menu-item"><a href="#">Login</a></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Page content -->
+    <div class="ui container main">
+      <div class="ui basic segment">
+        <h2 class="ui left floated header">Tasks</h2>
+        <button class="ui positive button right floated" onclick="$('.task-new').modal('show')">Add Task</button>
+      </div>
+
+      <table class="ui single line selectable inverted fixed sortable unstackable table tasks-table">
+        <thead>
+          <tr>
+            <th class="three wide">Name</th>
+            <th class="three wide">Category</th>
+            <th class="eight wide">Description</th>
+            <th class="two wide center aligned"><i class="settings icon"></i></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="three wide">Task 1</td>
+            <td class="three wide">Binary Exploitation</td>
+            <td class="eight wide">You have to solve this problem</td>
+            <td class="two wide center aligned">
+              <a href="#" data-id="1"><i class="large edit icon"></i></a>
+              <a href="#"><i class="large trash icon"></i></a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="ui dimmer task-loading">
+      <div class="ui large text loader">Funfando...</div>
+    </div>
+
+    <div class="ui modal task-delete">
+      <div class="header">Delete Task</div>
+
+      <div class="content">
+        <div class="ui form">
+          <div class="field">
+            <label>Name</label>
+            <input type="text" name="task-name" value="Task name" disabled>
+          </div>
+          <div class="field">
+            <label>Category</label>
+            <input type="text" name="task-category" value="Task category" disabled>
+          </div>
+          <div class="field">
+            <label>Description</label>
+            <textarea rows="3" disabled>Task description</textarea>
+          </div>
+
+          <div class="field">
+            <label>Hint</label>
+            <textarea rows="2" disabled>Task hint</textarea>
+          </div>
+
+          <div class="field">
+            <label>File</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="actions">
+        <div class="ui black cancel button">Cancel</div>
+        <div class="ui negative right labeled icon button">
+          Delete
+          <i class="trash icon"></i>
+        </div>
+      </div>
+    </div>
+
+    <form class="ui modal task-edit">
+      <div class="header">Edit Task</div>
+      <div class="content">
+        <div class="ui form">
+          <div class="field">
+            <label>Name</label>
+            <input type="text" name="task-name" placeholder="Insert Name">
+          </div>
+          <div class="field">
+            <label>Category</label>
+            <div class="ui fluid search selection dropdown">
+              <input type="hidden" name="task-category">
+              <i class="dropdown icon"></i>
+              <div class="default text">Select Category</div>
+              <div class="menu">
+                <div class="item" data-value="0">Binary Exploitation</div>
+                <div class="item" data-value="1">Reverse Engineering</div>
+              </div>
+            </div>
+          </div>
+          <div class="field">
+            <label>Description</label>
+            <textarea rows="3" placeholder="Insert Description"></textarea>
+          </div>
+
+          <div class="field">
+            <label>Hint</label>
+            <textarea rows="2" placeholder="Insert hint"></textarea>
+          </div>
+
+          <div class="field">
+            <label>File</label>
+            <div class="ui left action input">
+              <label for="attachmentName" class="ui labeled icon button btn-file">
+                <i class="attachment upload icon"></i>
+                Select file
+                <input type="file" id="attachmentName" name="attachmentName" style="display: none">
+              </label>
+              <input type="text" id="_attachmentName" disabled>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="actions">
+        <div class="ui black cancel button">Cancel</div>
+        <div class="ui positive right labeled icon ok button">
+          Save
+          <i class="checkmark icon"></i>
+        </div>
+      </div>
+    </form>
+
+    <form class="ui modal task-new">
+      <div class="header">New Task</div>
+      <div class="content">
+        <div class="ui form">
+          <div class="field">
+            <label>Name</label>
+            <input type="text" name="task-name" placeholder="Insert Name">
+          </div>
+          <div class="field">
+            <label>Category</label>
+            <div class="ui fluid search selection dropdown">
+              <input type="hidden" name="task-category">
+              <i class="dropdown icon"></i>
+              <div class="default text">Select Category</div>
+              <div class="menu">
+                <div class="item" data-value="0">Binary Exploitation</div>
+                <div class="item" data-value="1">Reverse Engineering</div>
+              </div>
+            </div>
+          </div>
+          <div class="field">
+            <label>Description</label>
+            <textarea rows="3" placeholder="Insert Description"></textarea>
+          </div>
+
+          <div class="field">
+            <label>Hint</label>
+            <textarea rows="2" placeholder="Insert hint"></textarea>
+          </div>
+
+          <div class="field">
+            <label>File</label>
+            <div class="ui left action input">
+              <label for="attachmentName" class="ui labeled icon button btn-file">
+                <i class="attachment upload icon"></i>
+                Select file
+                <input type="file" id="attachmentName" name="attachmentName" style="display: none">
+              </label>
+              <input type="text" id="_attachmentName" disabled>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="actions">
+        <div class="ui black cancel button">Discard</div>
+        <div class="ui positive right labeled icon ok button">
+          Create
+          <i class="checkmark icon"></i>
+        </div>
+      </div>
+    </form>
+
+    <!-- Bottom menu -->
+    <div class="ui inverted bottom secondary pointing menu">
+      <div class="ui container">
+        <div class="right menu">
+          <div class="item menu-item"><a href="#">github</a></div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+$('.tasks-table').tablesort()
+$('.ui.dropdown').dropdown()
+
+$('.tasks-table a:has(.edit)').on('click', function() {
+  $('.task-loading').addClass('active');
+
+  //$(this).data("id");
+  // Fetch
+
+  $('.task-loading').removeClass('active');
+
+  $('.task-edit').modal('show');
+});
+
+$('.tasks-table a:has(.trash)').on('click', function() {
+  $('.task-loading').addClass('active');
+
+  //$(this).data("id");
+  // Fetch
+
+  $('.task-loading').removeClass('active');
+
+  $('.task-delete').modal('show');
+});
+    </script>
+
+    <script>
+
+var MAX_SIZE = 30; // MB
+
+$(document).on('change', '.btn-file :file', function() {
+  var input = $(this);
+
+  if (navigator.appVersion.indexOf("MSIE") != -1) { // IE
+    var label = input.val();
+
+    input.trigger('fileselect', [ 1, label, 0 ]);
+  } else {
+    var label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
+    var numFiles = input.get(0).files ? input.get(0).files.length : 1;
+    var size = input.get(0).files[0].size;
+
+    input.trigger('fileselect', [ numFiles, label, size ]);
+  }
+});
+
+$('.btn-file :file').on('fileselect', function(event, numFiles, label, size) {
+  console.log("ok!");
+  $('#attachmentName').attr('name', 'attachmentName'); // allow upload.
+
+  if (size > 1024 * 1024 * MAX_SIZE ) {
+    alert('max size：<strong>' + MAX_SIZE + '</strong> MB.');
+
+    $('#attachmentName').removeAttr('name'); // cancel upload file.
+  } else {
+    $('#_attachmentName').val(label);
+  }
+});
+
+    </script>
+  </body>
+</html>

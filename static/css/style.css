@@ -27,7 +27,7 @@ body {
   background-color: #000 !important;
   border: none;
   margin: 0;
-  z-index: 1000;
+  z-index: 100;
 }
 
 .menu-item {
@@ -325,4 +325,14 @@ a.problem.accepted > i.flag.icon {
 .leaderboard td:last-child {
   padding-left: .78571429em !important;
   padding-right: .78571429em !important;
+}
+
+/* Tasks */
+.tasks-table a > .icon {
+  color: rgba(255, 255, 255, 0.5);
+  transition: color 0.15s ease;
+}
+
+.tasks-table a:hover > .icon {
+  color: white;
 }
